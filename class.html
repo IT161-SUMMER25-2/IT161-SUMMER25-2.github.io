@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About the Class</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT161 Student Gallery — Monster Hunter Universe</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>About the Class</h1>
-    <p>Welcome to IT161 — Web Authoring</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Monster Hunter Universe</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="class.html" class="active">Students</a>
+        <a href="monsters.html">Monsters</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Course Overview</h2>
-      <p>IT161 introduces the fundamentals of web development. Students learn to build, style, and structure websites using HTML and CSS. The course emphasizes accessibility, usability, and responsive design.</p>
+  <main class="container">
+    <section class="section">
+      <h1 id="gallery-title">IT161 Student Gallery</h1>
+      <p id="gallery-desc">A responsive gallery of our class. Each card can link to a personal homepage or project.</p>
     </section>
 
-    <section>
-      <h2>Website Purpose</h2>
-      <p>This website serves as a central project space for the class. It showcases student work, development updates, and a growing understanding of front-end web technologies.</p>
+    <!-- Accessible grid: cards are articles in a landmark section -->
+    <section class="section" aria-labelledby="gallery-title" aria-describedby="gallery-desc">
+      <div class="grid-3 cards">
+        <!-- Example: Duplicate this block per student -->
+        <article class="card student-card">
+          <div class="avatar" aria-hidden="true">KD</div>
+          <h2 class="student-name">Khang The Do</h2>
+          <p class="student-note">Monster Hunter fan • Web Dev student</p>
+          <figure class="frame">
+            <img src="Nergigante.jpg" alt="Sample hero image used on Khang's homepage" loading="lazy" />
+            <figcaption>Example image (lazy-loaded) — replace with a student photo later.</figcaption>
+          </figure>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="index.html">Homepage</a>
+          </div>
+        </article>
+
+        <article class="card student-card">
+          <div class="avatar" aria-hidden="true">AB</div>
+          <h2 class="student-name">Alex Brown</h2>
+          <p class="student-note">Frontend learner • Loves Palicoes</p>
+          <figure class="frame">
+            <img src="placeholder.jpg" alt="Placeholder portrait for Alex Brown" loading="lazy" />
+            <figcaption>Placeholder image — add real photo when available.</figcaption>
+          </figure>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+          </div>
+        </article>
+
+        <article class="card student-card">
+          <div class="avatar" aria-hidden="true">CY</div>
+          <h2 class="student-name">Casey Yang</h2>
+          <p class="student-note">Back‑end curious • Gunlance main</p>
+          <figure class="frame">
+            <img src="placeholder.jpg" alt="Placeholder portrait for Casey Yang" loading="lazy" />
+            <figcaption>Placeholder image — add real photo when available.</figcaption>
+          </figure>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 IT161 SUMMER25-2. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
