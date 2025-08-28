@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Khang The Do's Monster Hunter Fan Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khang The Do — Monster Hunter Universe</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Monster Hunter Universe</h1>
-    <p>By Khang The Do — A Hunter's Tribute</p>
+  <!-- Site Header & Nav -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Monster Hunter Universe</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="class.html">Students</a>
+        <a href="monsters.html">Monsters</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <!-- Hero -->
+  <section class="hero" role="img" aria-label="Hunters fighting Nergigante">
+    <img src="images/Nergigante.jpg" alt="Hunters battle Nergigante in Monster Hunter" />
+    <div class="hero-text">
+      <h1>Hunt. Craft. Conquer.</h1>
+      <p>By Khang The Do — A Hunter's Tribute</p>
+      <a class="btn" href="class.html">See Class Gallery</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- About -->
+    <section class="section">
       <h2>About Me</h2>
-      <p>Hi, I'm Khang! I'm passionate about Monster Hunter — from epic battles to rare armor sets. This site is my fan tribute to one of the most thrilling action RPG franchises ever made.</p>
+      <p>
+        Hi, I'm Khang! I’m passionate about Monster Hunter — from epic battles to rare armor sets.
+        This site is my fan tribute to one of the most thrilling action RPG franchises ever made.
+      </p>
     </section>
 
-    <section>
-      <h2>Epic Battle Art</h2>
-      <img src="Nergigante.jpg" alt="Monster Hunter battle scene">
-      <p>This image captures the intense action that makes Monster Hunter so legendary.</p>
+    <!-- Quick Links -->
+    <section class="section" aria-label="Quick navigation">
+      <h2>Quick Links</h2>
+      <div class="grid-3">
+        <a class="card btn btn-outline" href="class.html" style="text-align:center;">Students</a>
+        <a class="card btn btn-outline" href="monsters.html" style="text-align:center;">Monsters</a>
+        <a class="card btn btn-outline" href="weapons.html" style="text-align:center;">Weapons</a>
+        <a class="card btn btn-outline" href="about.html" style="text-align:center;">About</a>
+      </div>
     </section>
 
-    <section>
+    <!-- Highlights -->
+    <section class="section">
       <h2>Why I Love Monster Hunter</h2>
-      <ul>
-        <li>Incredible monster designs</li>
-        <li>Strategic co-op gameplay</li>
-        <li>Massive weapons and armor crafting</li>
-      </ul>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Monster Design</h3>
+          <p>Beautiful, terrifying, and endlessly memorable creatures.</p>
+        </article>
+        <article class="card">
+          <h3>Team Strategy</h3>
+          <p>Co-op hunts reward planning, skill, and communication.</p>
+        </article>
+        <article class="card">
+          <h3>Crafting</h3>
+          <p>Weapons & armor loops that make every hunt feel meaningful.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="section">
+      <h2>Epic Battle Art</h2>
+      <figure class="frame">
+        <img src="images/Nergigante.jpg" alt="Epic Monster Hunter battle scene" />
+        <figcaption>This image captures the intensity that makes Monster Hunter legendary.</figcaption>
+      </figure>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Khang The Do. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Auto-highlight current nav link -->
+  <script>
+    document.querySelectorAll('.site-nav a').forEach(a=>{
+      if(location.pathname.endsWith(a.getAttribute('href'))) a.classList.add('active');
+    });
+  </script>
 </body>
 </html>
+
