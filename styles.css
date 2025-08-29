@@ -39,4 +39,58 @@ footer {
   text-align: center;
   padding: 1em;
   margin-top: 2em;
+
 }
+/* --- Lightbox (Week 6) --- */
+.lb-overlay { position: fixed; inset: 0; display: none; z-index: 9999; }
+.lb-overlay.is-open { display: block; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.75); }
+.lb-dialog {
+  position: absolute; inset: 0;
+  margin: auto; max-width: min(90vw, 1100px); max-height: 90vh;
+  display: grid; grid-template-areas: "img" "cap";
+  align-items: center; justify-items: center; padding: 1rem;
+}
+.lb-img { grid-area: img; max-width: 100%; max-height: 70vh; display: block; }
+.lb-caption { grid-area: cap; color: #eee; margin-top: 0.5rem; text-align: center; }
+.lb-close, .lb-prev, .lb-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.55); color: #fff; border: 0; padding: 0.5rem 0.75rem;
+  font-size: 1.5rem; cursor: pointer; border-radius: 0.5rem;
+}
+.lb-close { top: 1rem; right: 1rem; transform: none; font-size: 2rem; }
+.lb-prev { left: 1rem; }
+.lb-next { right: 1rem; }
+.lb-close:focus, .lb-prev:focus, .lb-next:focus { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-overlay, .lb-dialog { transition: none !important; animation: none !important; }
+}
+
+/* --- Lightbox (Week 06 minimal) --- */
+.lb-overlay { position: fixed; inset: 0; display: none; }
+.lb-overlay.is-open { display: block; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.75); }
+.lb-dialog {
+  position: absolute; inset: 0;
+  margin: auto; max-width: min(90vw, 1100px); max-height: 90vh;
+  display: grid; grid-template-areas: "img" "cap";
+  align-items: center; justify-items: center; padding: 1rem;
+}
+.lb-img { grid-area: img; max-width: 100%; max-height: 70vh; display: block; }
+.lb-caption { grid-area: cap; color: #eee; margin-top: 0.5rem; text-align: center; }
+.lb-close, .lb-prev, .lb-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.55); color: #fff; border: 0; padding: 0.5rem 0.75rem;
+  font-size: 1.5rem; cursor: pointer; border-radius: 0.5rem;
+}
+.lb-close { top: 1rem; right: 1rem; transform: none; font-size: 2rem; }
+.lb-prev { left: 1rem; }
+.lb-next { right: 1rem; }
+.lb-close:focus, .lb-prev:focus, .lb-next:focus { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-overlay, .lb-dialog { transition: none !important; animation: none !important; }
+}
+
+
