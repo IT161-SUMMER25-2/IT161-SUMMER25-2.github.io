@@ -1,67 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weapons — Monster Hunter Universe</title>
+  <title>Weapons | IT161</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .lede { color:#374151; margin: 8px 0 16px; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:14px; }
+    .gallery img { width:100%; height:200px; object-fit:cover; border-radius:12px; display:block; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Monster Hunter Universe</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="class.html">Students</a>
-        <a href="monsters.html">Monsters</a>
-        <a href="weapons.html" class="active">Weapons</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <header class="page-wrap">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="class.html">Class</a>
+      <a href="monsters.html">Monsters</a>
+      <a href="weapons.html" aria-current="page">Weapons</a>
+      <a href="about.html">About</a>
+    </nav>
+    <h1>Weapons Gallery</h1>
+    <p class="lede">Click an image to view details in the lightbox.</p>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1>Weapons</h1>
-      <p>Pick your playstyle. Below are quick summaries—turn each into its own detail page later if you want.</p>
-    </section>
+  <main class="page-wrap" id="main">
+    <section aria-labelledby="weapons-heading">
+      <h2 id="weapons-heading" class="sr-only">Weapons</h2>
 
-    <section class="section">
-      <div class="grid-3">
-        <article class="card">
-          <h3>Great Sword</h3>
-          <p>Massive damage with charged slashes. Demands patience and positioning.</p>
-          <ul>
-            <li>Pros: Huge burst, part breaks</li>
-            <li>Cons: Slow, punishable</li>
-          </ul>
-        </article>
+      <div class="gallery" data-lightbox="gallery">
+        <!-- Dual Blades -->
+        <a href="images/DualBladeLogo.jpg"
+           data-caption="Dual Blades — rapid slashes and high mobility; Demon Mode for relentless offense.">
+          <img src="images/DualBladeLogo.jpg"
+               alt="Dual Blades artwork with two agile hunters"
+               loading="lazy" width="800" height="450">
+        </a>
 
-        <article class="card">
-          <h3>Long Sword</h3>
-          <p>Fluid counters and spirit gauge management for sustained DPS.</p>
-          <ul>
-            <li>Pros: Stylish counters</li>
-            <li>Cons: Greed = cart</li>
-          </ul>
-        </article>
+        <!-- Hunting Horn -->
+        <a href="images/HuntingHornLogo.jpg"
+           data-caption="Hunting Horn — attack while buffing allies; play notes to trigger Melody Effects.">
+          <img src="images/HuntingHornLogo.jpg"
+               alt="Hunting Horn players swinging a massive horn"
+               loading="lazy" width="800" height="450">
+        </a>
 
-        <article class="card">
-          <h3>Bow</h3>
-          <p>Mobile ranged pressure with coatings and stamina management.</p>
-          <ul>
-            <li>Pros: Safe chip, elemental builds</li>
-            <li>Cons: Stamina hungry</li>
-          </ul>
-        </article>
+        <!-- Gunlance -->
+        <a href="images/gunlanceLogo.jpg"
+           data-caption="Gunlance — lance plus explosive shelling; strong guard with Wyvern’s Fire burst.">
+          <img src="images/gunlanceLogo.jpg"
+               alt="Gunlance weapon pose with shield and barrel"
+               loading="lazy" width="800" height="450">
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
-    </div>
+  <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
+    © 2025 IT161 — Weapons.
   </footer>
+
+  <!-- Lightbox script (once per page that has a gallery) -->
+  <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>
