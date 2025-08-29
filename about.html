@@ -1,58 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Monster Hunter Universe</title>
+  <title>IT161 — About</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="About this IT161 project with image credits and sources.">
+  <meta property="og:title" content="IT161 — About">
+  <meta property="og:description" content="Project overview and image credits.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it161-summer25-2.github.io/about.html">
+  <meta property="og:image" content="https://it161-summer25-2.github.io/images/SilverRathalos.jpg">
+  <style>
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#111;color:#fff;padding:8px 12px;border-radius:8px;z-index:10000}
+    .site-nav a[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Monster Hunter Universe</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="class.html">Students</a>
-        <a href="monsters.html">Monsters</a>
-        <a href="weapons.html">Weapons</a>
-        <a href="about.html" class="active">About</a>
-      </nav>
-    </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="page-wrap">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="class.html">Class</a>
+      <a href="monsters.html">Monsters</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+    <h1>About this project</h1>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1>About This Site</h1>
-      <p>
-        Hi! I’m <strong>Khang The Do</strong>, a web dev student and Monster Hunter fan.
-        This site is a class project for IT161—built with plain HTML/CSS, no frameworks.
-      </p>
+  <main id="main" class="page-wrap">
+    <section>
+      <h2>Overview</h2>
+      <p>This site was built for IT161 to practice semantic HTML, accessibility, and basic interactivity.</p>
     </section>
 
-    <section class="section grid-3">
-      <article class="card">
-        <h3>Tech</h3>
-        <p>Static pages hosted on GitHub Pages. Responsive layout using CSS grid & flex.</p>
-      </article>
-      <article class="card">
-        <h3>Credits</h3>
-        <p>Nergigante art used as a hero image for educational/demo purposes.</p>
-      </article>
-      <article class="card">
-        <h3>Roadmap</h3>
-        <ul>
-          <li>Add more monster images</li>
-          <li>Student cards with photos</li>
-          <li>Light/dark theme toggle</li>
-        </ul>
-      </article>
+    <!-- 5) Credits section -->
+    <section aria-labelledby="credits-heading" style="margin-top:20px;">
+      <h2 id="credits-heading">Image Credits</h2>
+      <ul>
+        <li>Gold Rathian — source: <a href="#" rel="nofollow">Add link</a></li>
+        <li>Silver Rathalos — source: <a href="#" rel="nofollow">Add link</a></li>
+        <li>Legiana — source: <a href="#" rel="nofollow">Add link</a></li>
+        <li>Nergigante — source: <a href="#" rel="nofollow">Add link</a></li>
+        <li>Dual Blades / Hunting Horn / Gunlance artwork — source: <a href="#" rel="nofollow">Add link</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
-    </div>
+  <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
+    © 2025 IT161 — About.
   </footer>
 </body>
 </html>
