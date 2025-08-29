@@ -1,73 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Monsters — Monster Hunter Universe</title>
+  <title>Monsters | IT161</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .lede { color:#374151; margin: 8px 0 16px; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:14px; }
+    .gallery img { width:100%; height:200px; object-fit:cover; border-radius:12px; display:block; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Monster Hunter Universe</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="class.html">Students</a>
-        <a href="monsters.html" class="active">Monsters</a>
-        <a href="weapons.html">Weapons</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <header class="page-wrap">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="class.html">Class</a>
+      <a href="monsters.html" aria-current="page">Monsters</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="about.html">About</a>
+    </nav>
+    <h1>Monster Gallery</h1>
+    <p class="lede">Click any image to open it in the lightbox. Use ←/→ to navigate; Esc to close.</p>
   </header>
 
-  <main class="container" data-lightbox="gallery">
+  <main class="page-wrap" id="main">
     <section aria-labelledby="monsters-heading">
-  <h2 id="monsters-heading">Monster Gallery</h2>
+      <h2 id="monsters-heading" class="sr-only">Monsters</h2>
 
-  <div class="gallery" data-lightbox="gallery">
-    <!-- Gold Rathian -->
-    <a href="images/GoldRathian.jpg"
-       data-caption="Gold Rathian — rare gold-scaled Rathian. Elements: Fire, Poison. Weakness: Thunder.">
-      <img src="images/GoldRathian.jpg"
-           alt="Gold Rathian flying with golden scales"
-           loading="lazy" width="800" height="450">
-    </a>
+      <div class="gallery" data-lightbox="gallery">
+        <!-- Gold Rathian -->
+        <a href="images/GoldRathian.jpg"
+           data-caption="Gold Rathian — rare gold-scaled Rathian. Elements: Fire, Poison. Weakness: Thunder.">
+          <img src="images/GoldRathian.jpg"
+               alt="Gold Rathian flying with golden scales"
+               loading="lazy" width="800" height="450">
+        </a>
 
-    <!-- Silver Rathalos -->
-    <a href="images/SilverRathalos.jpg"
-       data-caption="Silver Rathalos — rare silver-scaled Rathalos. Elements: Fire, Poison. Weakness: Water.">
-      <img src="images/SilverRathalos.jpg"
-           alt="Silver Rathalos mid-flight spreading wings"
-           loading="lazy" width="800" height="450">
-    </a>
+        <!-- Silver Rathalos -->
+        <a href="images/SilverRathalos.jpg"
+           data-caption="Silver Rathalos — rare silver-scaled Rathalos. Elements: Fire, Poison. Weakness: Water.">
+          <img src="images/SilverRathalos.jpg"
+               alt="Silver Rathalos mid-flight spreading wings"
+               loading="lazy" width="800" height="450">
+        </a>
 
-    <!-- Legiana -->
-    <a href="images/legiana.jpg"
-       data-caption="Legiana — flying wyvern that emits freezing air. Element: Ice. Weaknesses: Fire, Poison.">
-      <img src="images/legiana.jpg"
-           alt="Legiana gliding with icy wings"
-           loading="lazy" width="800" height="450">
-    </a>
+        <!-- Legiana -->
+        <a href="images/legiana.jpg"
+           data-caption="Legiana — flying wyvern that emits freezing air. Element: Ice. Weaknesses: Fire, Poison.">
+          <img src="images/legiana.jpg"
+               alt="Legiana gliding with icy wings"
+               loading="lazy" width="800" height="450">
+        </a>
 
-    <!-- Nergigante (updated filename) -->
-    <a href="images/Nergigante(1).jpg"
-       data-caption="Nergigante — elder dragon with massive horns and spiked wings. Weakness: Thunder (Thunder Blast).">
-      <img src="images/Nergigante(1).jpg"
-           alt="Nergigante roaring with spiked wings spread"
-           loading="lazy" width="800" height="450">
-    </a>
-  </div>
-
-  <!-- make sure this is on the page once -->
-  <script src="scripts/lightbox.js" defer></script>
-</section>
+        <!-- Nergigante (updated filename) -->
+        <a href="images/Nergigante(1).jpg"
+           data-caption="Nergigante — elder dragon with massive horns and spiked wings. Weakness: Thunder (Thunder Blast).">
+          <img src="images/Nergigante(1).jpg"
+               alt="Nergigante roaring with spiked wings spread"
+               loading="lazy" width="800" height="450">
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
-    </div>
+  <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
+    © 2025 IT161 — Monsters.
   </footer>
+
+  <!-- Lightbox script (once per page that has a gallery) -->
   <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>
