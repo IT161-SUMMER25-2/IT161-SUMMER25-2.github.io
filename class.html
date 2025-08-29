@@ -1,93 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IT161 Student Gallery — Monster Hunter Universe</title>
+  <title>Class | IT161</title>
+
+  <!-- Your main site styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- NOTE: Do NOT put non-image anchors inside the gallery container -->
+  <style>
+    /* Optional: light spacing if your CSS doesn't already handle it */
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .lede { color: #374151; margin: 8px 0 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 14px; }
+    .cards .card { border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden; background: #fff; }
+    .card .meta { padding: 10px 12px; }
+    .actions a { margin-right: 10px; }
+    .gallery img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; display: block; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Monster Hunter Universe</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="class.html" class="active">Students</a>
-        <a href="monsters.html">Monsters</a>
-        <a href="weapons.html">Weapons</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <header class="page-wrap">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="monsters.html">Monsters</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="about.html">About</a>
+      <a href="class.html" aria-current="page">Class</a>
+    </nav>
+    <h1>Class Profiles</h1>
+    <p class="lede">Click any photo to open the lightbox. Use ←/→ to navigate; press Esc to close.</p>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1 id="gallery-title">IT161 Student Gallery</h1>
-      <p id="gallery-desc">A responsive gallery of our class. Each card can link to a personal homepage or project.</p>
+  <main class="page-wrap">
+    <!-- ===== IMAGE GALLERY ONLY (lightbox binds here) =====
+         IMPORTANT: only the <a><img></a> elements live inside this container. -->
+    <section aria-labelledby="students-heading">
+      <h2 id="students-heading" class="sr-only">Student Gallery</h2>
+
+      <div class="grid-3 gallery" data-lightbox="gallery">
+        <!-- Image 1 -->
+        <a href="images/Dual-blade.jpg" data-caption="Dual Blades specialist — dodge, slice, vanish.">
+          <img
+            src="images/Dual-blade.jpg"
+            alt="Khang The Do with Dual Blades"
+            loading="lazy"
+            width="800" height="450"
+          >
+        </a>
+
+        <!-- Image 2 -->
+        <a href="images/monster-hunter-wilds-posing-with-hunting-horn.png"
+           data-caption="Monster Hunter Wilds — Hunting Horn pose">
+          <img
+            src="images/monster-hunter-wilds-posing-with-hunting-horn.png"
+            alt="Hunting Horn pose"
+            loading="lazy"
+            width="800" height="450"
+          >
+        </a>
+
+        <!-- Image 3 -->
+        <a href="images/Monster-Hunter-Rise-Gunlance-Weapon-Pose.png"
+           data-caption="Monster Hunter Rise — Gunlance shelling pose">
+          <img
+            src="images/Monster-Hunter-Rise-Gunlance-Weapon-Pose.png"
+            alt="Gunlance shelling pose"
+            loading="lazy"
+            width="800" height="450"
+          >
+        </a>
+      </div>
     </section>
 
-    <section class="section" aria-labelledby="gallery-title" aria-describedby="gallery-desc">
-      <div class="grid-3 cards" data-lightbox="gallery">
+    <!-- ===== NON-IMAGE LINKS (kept OUTSIDE the gallery) ===== -->
+    <section aria-labelledby="links-heading" style="margin-top: 20px;">
+      <h2 id="links-heading" class="sr-only">Student Links</h2>
 
-  <div class="gallery" data-lightbox="gallery">
-    <a href="images/Dual-blade.jpg" data-caption="Dual blade">
-      <img src="images/Dual-blade.jpg" alt="Dual blade" loading="lazy" width="800" height="450">
-    </a>
-    <a href="images/monster-hunter-wilds-posing-with-hunting-horn.png" data-caption="monster hunter wilds posing with hunting horn">
-      <img src="images/monster-hunter-wilds-posing-with-hunting-horn.png" alt="monster hunter wilds posing with hunting horn" loading="lazy" width="800" height="450">
-    </a>
-    <a href="images/Monster-Hunter-Rise-Gunlance-Weapon-Pose.png" data-caption="Monster Hunter Rise Gunlance Weapon Pose">
-      <img src="images/Monster-Hunter-Rise-Gunlance-Weapon-Pose.png" alt="Monster Hunter Rise Gunlance Weapon Pose" loading="lazy" width="800" height="450">
-    </a>
-  </div>
-</div>
-          <h2 class="student-name">Khang The Do</h2>
-          <p class="student-note">Monster Hunter fan • Web Dev student</p>
-          <figure class="frame">
-            <img src="images/Dual-blade.jpg" alt="Sample hero image used on Khang's homepage" loading="lazy" />
-            <figcaption>Dual Blades specialist who hunts in motion—dodge, slice, vanish, repeat. Openings aren’t found; they’re made.</figcaption>
-          </figure>
-          <div class="card-actions">
-            <a class="btn btn-outline" href="index.html">Homepage</a>
+      <div class="grid-3 cards">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="meta">
+            <div class="name"><strong>Khang The Do</strong></div>
+            <div class="role" style="color:#6b7280;">Dual Blades</div>
+            <p class="actions">
+              <a class="btn" href="index.html">Homepage</a>
+              <a class="btn" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
           </div>
         </article>
 
-        <article class="card student-card">
-          <div class="avatar" aria-hidden="true"> </div>
-          <h2 class="student-name">Alex Brown</h2>
-          <p class="student-note">Frontend learner • Loves Palicoes</p>
-          <figure class="frame">
-            <img src="images/monster-hunter-wilds-posing-with-hunting-horn.png" alt="Monster Hunter Wilds character posing with Hunting Horn" loading="lazy" />
-            <figcaption>Monster Hunter Wilds Hunting Horn pose.</figcaption>
-          </figure>
-          <div class="card-actions">
-            <a class="btn btn-outline" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="meta">
+            <div class="name"><strong>Alex Brown</strong></div>
+            <div class="role" style="color:#6b7280;">Hunting Horn</div>
+            <p class="actions">
+              <a class="btn" href="index.html">Homepage</a>
+              <a class="btn" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
           </div>
         </article>
 
-        <article class="card student-card">
-          <div class="avatar" aria-hidden="true"> </div>
-          <h2 class="student-name">Casey Yang</h2>
-          <p class="student-note">Back‑end curious • Gunlance main</p>
-          <figure class="frame">
-            <img src="images/Monster-Hunter-Rise-Gunlance-Weapon-Pose.png" alt="Monster Hunter Rise Gunlance pose" loading="lazy" />
-            <figcaption>Monster Hunter Rise Gunlance pose.</figcaption>
-          </figure>
-          <div class="card-actions">
-            <a class="btn btn-outline" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="meta">
+            <div class="name"><strong>Casey Yang</strong></div>
+            <div class="role" style="color:#6b7280;">Gunlance</div>
+            <p class="actions">
+              <a class="btn" href="index.html">Homepage</a>
+              <a class="btn" href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
           </div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
-    </div>
+  <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
+    © 2025 IT161 — Class roster gallery with lightbox.
   </footer>
+
+  <!-- Lightbox script (once per page that has a gallery) -->
   <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>
-
 
