@@ -4,23 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IT161 — Class</title>
+
+  <!-- Your site CSS -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="images/favicon.png">
+
+  <!-- Basic metadata (student level) -->
   <meta name="description" content="Class profiles with a lightbox gallery of featured images.">
   <meta property="og:title" content="IT161 — Class">
   <meta property="og:description" content="Student cards and gallery; click images to open the lightbox.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://it161-summer25-2.github.io/class.html">
   <meta property="og:image" content="https://it161-summer25-2.github.io/images/DualBladeLogo.jpg">
+
+  <!-- Simple page styles (keep it student-friendly) -->
   <style>
     .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
     .lede { color:#374151; margin: 8px 0 16px; }
+
+    /* Cards grid */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; overflow: hidden; }
+    .card .meta { padding: 10px 12px; }
+    .card .name { font-weight: 700; }
+    .card .role { color: #6b7280; margin: 4px 0 8px; }
+    .actions a { margin-right: 10px; }
+
+    /* The image area (only this part is a gallery trigger) */
+    .thumb img { width: 100%; height: 180px; object-fit: cover; display: block; }
+
+    /* Accessibility helpers already used course-wide */
     .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#111;color:#fff;padding:8px 12px;border-radius:8px;z-index:10000}
     .site-nav a[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
   </style>
 </head>
 <body>
+  <!-- Skip link (accessibility) -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="page-wrap">
@@ -32,16 +52,97 @@
       <a href="about.html">About</a>
     </nav>
     <h1>Class Profiles</h1>
-    <p class="lede">Click any photo to open the lightbox. Use ←/→ to navigate; Esc to close.</p>
+    <p class="lede">Click a profile image to open the lightbox. Use ←/→ to navigate; press Esc to close.</p>
   </header>
 
+  <!-- Main content wrapper -->
   <main id="main" class="page-wrap">
-   
+
+    <section aria-labelledby="students-heading">
+      <h2 id="students-heading" class="sr-only">Students</h2>
+
+      <div class="cards">
+        <!-- Card 1 -->
+        <article class="card">
+          <!-- Only the image anchor lives inside the gallery container -->
+          <div class="thumb" data-lightbox="gallery">
+            <a href="images/DualBladeLogo.jpg"
+               data-caption="Khang The Do — Dual Blades: fast slashes and high mobility.">
+              <img
+                src="images/DualBladeLogo.jpg"
+                alt="Khang The Do with Dual Blades"
+                loading="lazy"
+                width="800" height="450"
+              >
+            </a>
+          </div>
+
+          <div class="meta">
+            <div class="name">Khang The Do</div>
+            <div class="role">Dual Blades</div>
+            <p class="actions">
+              <a href="index.html">Homepage</a>
+              <a href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="thumb" data-lightbox="gallery">
+            <a href="images/HuntingHornLogo.jpg"
+               data-caption="Alex Brown — Hunting Horn: deal damage while buffing allies.">
+              <img
+                src="images/HuntingHornLogo.jpg"
+                alt="Alex Brown with a Hunting Horn"
+                loading="lazy"
+                width="800" height="450"
+              >
+            </a>
+          </div>
+
+          <div class="meta">
+            <div class="name">Alex Brown</div>
+            <div class="role">Hunting Horn</div>
+            <p class="actions">
+              <a href="index.html">Homepage</a>
+              <a href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="thumb" data-lightbox="gallery">
+            <a href="images/gunlanceLogo.jpg"
+               data-caption="Casey Yang — Gunlance: strong guard with explosive shelling.">
+              <img
+                src="images/gunlanceLogo.jpg"
+                alt="Casey Yang posing with a Gunlance"
+                loading="lazy"
+                width="800" height="450"
+              >
+            </a>
+          </div>
+
+          <div class="meta">
+            <div class="name">Casey Yang</div>
+            <div class="role">Gunlance</div>
+            <p class="actions">
+              <a href="index.html">Homepage</a>
+              <a href="#" aria-disabled="true">Portfolio (coming soon)</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
-    © 2025 IT161 — Class
+    © 2025 IT161 — Class.
   </footer>
+
+  <!-- Lightbox script (make sure this file exists) -->
   <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>
