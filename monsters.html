@@ -3,16 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Monsters | IT161</title>
+  <title>IT161 — Monsters</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="Monster gallery with captions and a lightbox viewer.">
+  <meta property="og:title" content="IT161 — Monsters">
+  <meta property="og:description" content="Gold Rathian, Silver Rathalos, Legiana, and Nergigante with captions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it161-summer25-2.github.io/monsters.html">
+  <meta property="og:image" content="https://it161-summer25-2.github.io/images/GoldRathian.jpg">
   <style>
     .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
     .lede { color:#374151; margin: 8px 0 16px; }
     .gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:14px; }
     .gallery img { width:100%; height:200px; object-fit:cover; border-radius:12px; display:block; }
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#111;color:#fff;padding:8px 12px;border-radius:8px;z-index:10000}
+    .site-nav a[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="page-wrap">
     <nav class="site-nav" aria-label="Primary">
       <a href="index.html">Home</a>
@@ -53,6 +65,8 @@
                alt="Legiana gliding with icy wings"
                loading="lazy" width="800" height="450">
         </a>
+
+        <!-- Nergigante -->
         <a href="images/Nergigante(1).jpg"
            data-caption="Nergigante — elder dragon with massive horns and spiked wings. Weakness: Thunder (Thunder Blast).">
           <img src="images/Nergigante(1).jpg"
@@ -67,7 +81,6 @@
     © 2025 IT161 — Monsters.
   </footer>
 
-  <!-- Lightbox script (once per page that has a gallery) -->
   <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>
