@@ -21,31 +21,46 @@
   </header>
 
   <main class="container" data-lightbox="gallery">
-    <section class="section">
-      <h1>Monsters</h1>
-      <p>Iconic threats from the New World and beyond. Add cards below as you collect art or info.</p>
-    </section>
-
-    <section class="section">
-      <div class="grid-3" data-lightbox="gallery">
+    <section aria-labelledby="monsters-heading">
+  <h2 id="monsters-heading">Monster Gallery</h2>
 
   <div class="gallery" data-lightbox="gallery">
-    <a href="images/Nergigante.jpg" data-caption="Nergigante">
-      <img src="images/Nergigante.jpg" alt="Nergigante" loading="lazy" width="800" height="450">
+    <!-- Gold Rathian -->
+    <a href="images/GoldRathian.jpg"
+       data-caption="Gold Rathian — rare gold-scaled Rathian. Elements: Fire, Poison. Weakness: Thunder.">
+      <img src="images/GoldRathian.jpg"
+           alt="Gold Rathian flying with golden scales"
+           loading="lazy" width="800" height="450">
+    </a>
+
+    <!-- Silver Rathalos -->
+    <a href="images/SilverRathalos.jpg"
+       data-caption="Silver Rathalos — rare silver-scaled Rathalos. Elements: Fire, Poison. Weakness: Water.">
+      <img src="images/SilverRathalos.jpg"
+           alt="Silver Rathalos mid-flight spreading wings"
+           loading="lazy" width="800" height="450">
+    </a>
+
+    <!-- Legiana -->
+    <a href="images/legiana.jpg"
+       data-caption="Legiana — flying wyvern that emits freezing air. Element: Ice. Weaknesses: Fire, Poison.">
+      <img src="images/legiana.jpg"
+           alt="Legiana gliding with icy wings"
+           loading="lazy" width="800" height="450">
+    </a>
+
+    <!-- Nergigante (updated filename) -->
+    <a href="images/Nergigante(1).jpg"
+       data-caption="Nergigante — elder dragon with massive horns and spiked wings. Weakness: Thunder (Thunder Blast).">
+      <img src="images/Nergigante(1).jpg"
+           alt="Nergigante roaring with spiked wings spread"
+           loading="lazy" width="800" height="450">
     </a>
   </div>
-</div>
-        </article>
 
-        <article class="card">
-          <h3>Legiana</h3>
-          <p>Chilling gusts and graceful dives. Control the airspace or suffer.</p>
-          <div class="card-actions">
-            <a class="btn btn-outline" href="#">Add image later</a>
-          </div>
-        </article>
-      </div>
-    </section>
+  <!-- make sure this is on the page once -->
+  <script src="scripts/lightbox.js" defer></script>
+</section>
   </main>
 
   <footer class="site-footer">
