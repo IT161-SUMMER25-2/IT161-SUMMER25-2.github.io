@@ -1,98 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khang The Do — Monster Hunter Universe</title>
+  <title>IT161 — Homepage</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.png">
+  <meta name="description" content="IT161 project homepage with links to Monsters, Weapons, Class, and About pages.">
+  <meta property="og:title" content="IT161 — Homepage">
+  <meta property="og:description" content="Explore monsters, weapons, and class profiles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it161-summer25-2.github.io/">
+  <meta property="og:image" content="https://it161-summer25-2.github.io/images/GoldRathian.jpg">
+  <style>
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .lede { color:#374151; margin: 8px 0 16px; }
+    /* 1) Skip link + nav highlight */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#111;color:#fff;padding:8px 12px;border-radius:8px;z-index:10000}
+    .site-nav a[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+  </style>
 </head>
 <body>
-  <!-- Site Header & Nav -->
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Monster Hunter Universe</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html" class="active">Home</a>
-        <a href="class.html">Students</a>
-        <a href="monsters.html">Monsters</a>
-        <a href="weapons.html">Weapons</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <!-- 2) Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="page-wrap">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="class.html">Class</a>
+      <a href="monsters.html">Monsters</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="about.html">About</a>
+    </nav>
+    <h1>Welcome to IT161</h1>
+    <p class="lede">Explore the monsters, weapon types, and our class gallery.</p>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" role="img" aria-label="Hunters fighting Nergigante">
-    <img src="images/Nergigante.jpg" alt="Hunters battle Nergigante in Monster Hunter" />
-    <div class="hero-text">
-      <h1>Hunt. Craft. Conquer.</h1>
-      <p>By Khang The Do — A Hunter's Tribute</p>
-      <a class="btn" href="class.html">See Class Gallery</a>
-    </div>
-  </section>
-
-  <main class="container">
-    <!-- About -->
-    <section class="section">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm Khang! I’m passionate about Monster Hunter — from epic battles to rare armor sets.
-        This site is my fan tribute to one of the most thrilling action RPG franchises ever made.
-      </p>
-    </section>
-
-    <!-- Quick Links -->
-    <section class="section" aria-label="Quick navigation">
-      <h2>Quick Links</h2>
-      <div class="grid-3">
-        <a class="card btn btn-outline" href="class.html" style="text-align:center;">Students</a>
-        <a class="card btn btn-outline" href="monsters.html" style="text-align:center;">Monsters</a>
-        <a class="card btn btn-outline" href="weapons.html" style="text-align:center;">Weapons</a>
-        <a class="card btn btn-outline" href="about.html" style="text-align:center;">About</a>
-      </div>
-    </section>
-
-    <!-- Highlights -->
-    <section class="section">
-      <h2>Why I Love Monster Hunter</h2>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Monster Design</h3>
-          <p>Beautiful, terrifying, and endlessly memorable creatures.</p>
-        </article>
-        <article class="card">
-          <h3>Team Strategy</h3>
-          <p>Co-op hunts reward planning, skill, and communication.</p>
-        </article>
-        <article class="card">
-          <h3>Crafting</h3>
-          <p>Weapons & armor loops that make every hunt feel meaningful.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Featured Image -->
-    <section class="section">
-      <h2>Epic Battle Art</h2>
-      <figure class="frame">
-        <img src="images/Nergigante.jpg" alt="Epic Monster Hunter battle scene" />
-        <figcaption>This image captures the intensity that makes Monster Hunter legendary.</figcaption>
-      </figure>
+  <!-- 2) Wrap main content -->
+  <main id="main" class="page-wrap">
+    <section>
+      <h2>Start here</h2>
+      <ul>
+        <li><a href="monsters.html">Monster Gallery</a></li>
+        <li><a href="weapons.html">Weapon Gallery</a></li>
+        <li><a href="class.html">Class Profiles</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Khang The Do. All rights reserved.</p>
-    </div>
+  <footer class="page-wrap" style="color:#6b7280;font-size:0.95rem;">
+    © 2025 IT161
   </footer>
-
-  <!-- Auto-highlight current nav link -->
-  <script>
-    document.querySelectorAll('.site-nav a').forEach(a=>{
-      if(location.pathname.endsWith(a.getAttribute('href'))) a.classList.add('active');
-    });
-  </script>
 </body>
 </html>
-
